@@ -45,6 +45,7 @@ while (monster > 0):
     if(hero <= 0 or monster <= 0):
         break
     turn = turn +1
+    print("Your health: ",hero,"/10HP")
     answer = input("Would you like to switch weapons? \n y/n \n =====>")
     if (answer == 'y'):
         blade()    
