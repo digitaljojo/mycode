@@ -8,9 +8,12 @@ def main():
 
     while True:
         name= input("What is your name?\n>")
-        num= int(input("Pick a number between 1 and 3: "))
-
-        if (num) in words.keys():
+        num= (input("Pick a number between 1 and 3: "))
+        while (not(num.isdigit()) or int(num) > 3 or int(num) <1): #ensures valid input
+            num= (input("Invalid input. Please pick a number between 1 and 3: "))
+        num = int(num)
+            
+        if name and num in words.keys():
             print("Hi " +  name.capitalize() + "! Welcome to Day 2 of Python Training!")
             print("Hi " + name.capitalize() + "! Have a " + words[num] + " day!")
             break
